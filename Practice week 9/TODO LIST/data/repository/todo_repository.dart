@@ -49,7 +49,7 @@ class TodoRepository {
       final List<Todo> todos = [];
       for (int i = 0; i < jsonList.length; i++) {
         final item = jsonList[i];
-        if (item == null) continue; // skip the null at index 0
+        if (item == null) continue; 
         todos.add(TodoDto.fromJson(i.toString(), item as Map<String, dynamic>));
       }
       return todos;
